@@ -3,7 +3,6 @@ Bundler.require
 
 require_relative 'lib/game'
 require_relative 'lib/player'
-require_relative 'lib/humanplayer'
 
 # Create Player 1:
 player1 = Player.new("Josiane")
@@ -24,12 +23,12 @@ while (player1.life_points > 0) && (player2.life_points > 0) do
     player1.name
     player2.name
     
-    player2.attacks(player1)
-    player1.show_state
+    player1.attacks(player2)
+    player2.show_state
 
-    unless player1.life_points == 0
-        player1.attacks(player2)
-        player2.show_state
+    unless player2.life_points == 0
+        player2.attacks(player1)
+        player1.show_state
     end
     counter +=1
 end
