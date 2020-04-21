@@ -2,34 +2,6 @@ class Player
     attr_reader :life_points
     attr_accessor :name
 
-    # ascii_art = "
-    #             .I.
-    #            / : \
-    #            |===|
-    #            >._.<
-    #        .=-<     >-=.
-    #       /.'`(`-+-')'`.\
-    #     _/`.__/  :  \__.'\_
-    #    ( `._/\`. : .'/\_.' )
-    #     >-(_) \ `:' / (_)-<
-    #     | |  / \___/ \  | |
-    #     )^( | .' : `. | )^(
-    #    |  _\|`-._:_.-'| \  |
-    #    "-<\)| :  |  : |  "-"
-    #      (\\| : / \ : |
-    #        \\-:-| |-:-')
-    #         \\:_/ \_:_/
-    #         |\\_| |_:_|
-    #         (;\\/ \__;)
-    #         |: \\  | :|
-    #         \: /\\ \ :/
-    #         |==| \\|==|
-    #        /v-'(  \\`-v\
-    #       // .-'   \\. \\
-    #       `-'       \\`-'
-    #                  \|
-    #             "
-
     def initialize(name)
         @name = name
         @life_points = 10
@@ -57,10 +29,6 @@ class Player
         infliged_damage = compute_damage
         puts "#{self.name} inflige #{infliged_damage} pts de degats à #{player.name}!"
         player.gets_damage(infliged_damage)
-    end
-
-    def reset
-        @life_points = 10
     end
 
     private
