@@ -37,9 +37,9 @@ class Player
 
     def show_state
         if @life_points > 0
-            print "#{@name} as maintenant #{@life_points} points de vie"
+            puts "#{@name} a #{@life_points} points de vie"
         else
-            print "#{@name} a ete tue!"
+            puts "#{@name} a été tué!"
         end
     end
 
