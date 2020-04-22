@@ -4,25 +4,17 @@ class HumanPlayer < Player
     attr_reader :weapon_level
 
     def initialize(name)
-        @name = name
-        @life_points = 100
         @weapon_level = 1
-    end
-
-    def show_state
-        if @life_points > 0
-            puts "#{@name}: tu as maintenant #{@life_points} points de vie, et une arme de niveau #{@weapon_level}"
-        else
-            puts "#{@name} a ete tue!"
-        end
+        life = 100
+        super(name,life)
     end
 
     def search_weapon
         new_weapon_level = rand(1..6)
         puts "tu as trouvé une arme de niveau: #{new_weapon_level}"
         if new_weapon_level > @weapon_level
-            puts "Youhou ! elle est meilleure que ton arme actuelle : tu la prends."
             @weapon_level = new_weapon_level
+            puts "Youhou ! elle est meilleure que ton arme actuelle : tu la prends."
         else
             puts "M#@! Cette arme n'est pas meilleure que ton arme actuelle!"
         end
@@ -47,11 +39,6 @@ class HumanPlayer < Player
                 @life_points = 100
             end
         end
-    end
-
-    def reset
-        @life_points = 100
-        @weapon_level = 1
     end
 
     private

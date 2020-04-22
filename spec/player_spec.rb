@@ -1,10 +1,9 @@
 require_relative '../lib/player'
 
-# initialize
 describe "Player" do
     context "When testing the Player class" do
         it "initialize method should return a Player object" do
-            expect(Player.new("josianne")).to be_kind_of(Player)
+            expect(Player.new("josianne")).to be_instance_of(Player)
             expect(Player.new("josianne")).to respond_to(:show_state)
             expect(Player.new("josianne")).to respond_to(:gets_damage)
             expect(Player.new("josianne")).to respond_to(:attacks)
