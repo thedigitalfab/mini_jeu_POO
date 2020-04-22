@@ -47,6 +47,9 @@ class Game
             @human_player.search_health_pack
         else
             @human_player.attacks(@enemies[choice.to_i])
+            if @enemies[choice.to_i].life_points <= 0
+                kill_player(enemy)
+            end
         end
     end
 
