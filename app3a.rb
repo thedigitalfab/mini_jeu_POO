@@ -17,8 +17,7 @@ end
 def ask_player_action
     puts "Que voulez vous faire ?"
     print "> "
-    action = gets.chomp
-    return action
+    return gets.chomp
 end
 
 #Welcome Message:

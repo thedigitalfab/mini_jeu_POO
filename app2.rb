@@ -36,7 +36,7 @@ ennemies = [Player.new("Josiane"),Player.new("José")]
 # Fight session:
 while player.life_points > 0 && (ennemies[0].life_points > 0 || ennemies[1].life_points > 0)
     # Show Human Player state:
-    player.show_state
+    puts player.show_state
 
     # Show Menu:
     puts "Quelle action veux-tu effectuer ?"
@@ -45,10 +45,8 @@ while player.life_points > 0 && (ennemies[0].life_points > 0 || ennemies[1].life
     puts "s - chercher à se soigner "
     puts "----"
     puts "attaquer un joueur en vue :"
-    print "0 - "
-    puts "#{ennemies[0].show_state}"
-    print "1 - "
-    puts "#{ennemies[1].show_state}"
+    puts "0 - #{ennemies[0].show_state}"
+    puts "1 - #{ennemies[1].show_state}"
 
     # Get user choice:
     user_choice = "z"
